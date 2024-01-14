@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indafth dom</title>
+</head>
+<body class="parents">
+ 
+    <div class="daylist">
+        <div class="days">Monday</div><h1>hay</h1>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+        <div class="days">seterday</div>
+        <div class="days">sunday</div>
+
+    </div>
+</body>
+<script>
+    let days = document.querySelector('.daylist')
+    console.log(days)
+    console.log(days.children)
+    console.log(days.children[1])
+    console.log(days.children[1].innerHTML)
+    console.log(days.parentElement)
+    for (let i = 0; i < days.children.length; i++) {
+        console.log(days.children[i].innerHTML)
+        
+    }
+    console.log(days.firstChild)
+    console.log(days.firstElementChild.innerHTML)
+    console.log(days.lastChild)
+    console.log(days.lastElementChild.innerHTML)
+    console.log(days.childElementCount)
+    console.log(days.childNodes)
+   // console.log(daylist.children)
+
+   //isi tarah child se parents me bhi jaya ja sakta hai
+  let day =  document.querySelector('.days')
+  console.log(day.innerHTML)
+  console.log(day.parentElement.children)
+  console.log(day.nextElementSibling.innerHTML)
+  console.log(day.className)
+
+
+
+
+   
+</script>
+</html>

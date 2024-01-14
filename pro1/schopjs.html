@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>schop in js</title>
+</head>
+<body>
+    <h1>schop in js</h1>
+    
+</body>
+<script>
+  
+    let a = 10;
+    if(true){
+        let a =2;
+        const b = 10;
+        var c = 19;
+    }
+    c = 40;
+    console.log(a)
+
+
+    console.log("Hoisting kya hai")
+
+
+
+    console.log(one(10))  //isme funtion define karne se pahle call kiya ja raha hai
+    //ise hi hoisting kaha jata hai
+    function one(num){
+        let add =  num +2
+        return add
+    }
+
+    
+    //console.log(two(10))  //isme error aayga
+    const two = function(num){
+        return num + 3;
+    }
+    console.log(two(10))
+
+
+    console.log("this keyword in js")
+
+    const user = {
+        name : "ritesh",
+        branch : "IT",
+        userMassage :function() {
+            console.log(`${this.name} student is from ${this.branch}`)
+
+        }
+    }
+
+    user.userMassage()
+    user.name = "rinku ji"
+    user.userMassage()
+    
+
+   
+    
+
+
+
+</script>
+</html>

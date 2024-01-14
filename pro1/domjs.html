@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>dom kya hai</h1>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+
+    <h2 class="Hello">Hello this is ritesh</h2 >
+    <h2 class="Hello">i am from it branch</h2>
+    <h2 class="Hello">I am just a learner</h2>
+    <h2 class="Hello">I want to go satlok</h2>
+
+    <h1 id="clickhead" value="10">Click event</h1>
+</body>
+<script>
+   var a = document.querySelector('ul')
+   var h2element = document.getElementsByClassName('Hello')
+   console.log(h2element)
+   console.log("converting html collection into array")
+   console.log(Array.from(h2element)) //array ke form me convert
+
+   const arrahtml = Array.from(h2element)
+
+
+   arrahtml.forEach((h2listitem)=>{
+    h2listitem.style.color = "blue"
+
+   })
+
+   
+   var list = document.querySelectorAll('li')
+   const listtoarr = Array.from(list)
+   console.log(listtoarr)
+   listtoarr.forEach((val) =>{
+    val.style.color = "red"
+
+   })
+   
+   let clickh = document.getElementById('clickhead')
+   console.log(clickh.innerHTML)
+   clickh.addEventListener("click",(e)=>{
+        console.log(e.bubbles)
+        console.log(e)
+
+    })
+        
+
+   
+
+   
+</script>
+</html>

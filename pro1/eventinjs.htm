@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in js</title>
+</head>
+<body>
+    <h1>I am Learning Events today</h1>
+</body>
+<script>
+    document.querySelector('h1').addEventListener('click',function(e){
+        console.log("hello bro")
+        console.log(e.key)
+
+        // event ke ander ye cheeje sikhni chahiye jo interviews me kaam
+        //dega
+
+        //type, timestamp , defaultPrevented, target
+        //toElement , currentTarget, srcElement
+        //clientX,clientY, screenY, ScreenX
+        //alt key, key code ,shiftkey ,ctrlKey
+    },false)
+
+
+    //Event Propogation
+    //false => Bubbling : Niche wale element ke bad uper ke Event chalega,
+    //jo ki default me hota hai
+
+    //true => capturing : Uper ke elenment ka event pahle chalega,then niche children
+    //iske liye therd parameter me true pass karna hoga 
+
+
+
+
+</script>
+<body>
+    <div>
+        <ul class="ul">
+            <li>Hindi</li>
+            <li>Ganit</li>
+            <li>Social scince</li>
+            <li>Sanskrit</li>
+            <li>Other</li>
+            <li><a href="google.com">Google link</a></li>
+        
+        </ul>
+    </div>
+
+    <script>
+        //propagation ko roka bhi ja sakta stopropagation ke through
+        const ullist = document.querySelector(".ul")
+        ullist.addEventListener('click',function(e){
+            console.log("ul me click hua")
+
+            e.stopPropagation()
+            //niche nahi jayga selected li ke event me
+
+        },true)
+        
+        ullist.children[3].addEventListener('click',function(e){
+            console.log("sanskrit me click hohe")
+        },true)
+
+        ullist.children[5].addEventListener('click',function(e){
+            e.preventDefault();
+            //isse default ki pahle values aayga mtlb link me redirect nahi hoga
+            console.log("link clicked")
+
+        },true)
+    </script>
+</body>
+</html>

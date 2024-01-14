@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 in javascript</title>
+</head>
+<body>
+    <h1>es6 sikh raha hu</h1>
+    
+</body>
+
+<h2  style="color: blueviolet;">Arow funtion and templet literel</h2>
+<script>
+
+//This is arrow funtion
+ let c = "this is literel template";
+    
+  let b =()=>{
+        console.log("this is basic flat arrow funtion")
+        hellw = 2;
+        console.log(`hellw.${c}`);
+    }
+    b();
+
+ //flat arrow funtion with parameter
+ 
+ 
+ let afWp = (para,para2) =>{
+    console.log(para);
+    console.log(para2 + para);
+ }
+ afWp("ramu");
+ afWp("ramu aur tum","para2 print kr diya");
+
+//flat arrow funtion with implicit return
+
+let implicitReturn = ()=>"kaha jathas be";
+console.log(implicitReturn());
+
+</script>
+
+
+
+<h2 style="color: rgb(13, 205, 7);">default parameter and Rest & spread</h2>
+<script>
+
+console.log("Default parameter");
+const defaultParameter =(a,b="default",c=10)=>{
+    console.log(a,b,c);
+   
+}
+
+defaultParameter(1);
+
+
+console.log("Rest and Spread");
+let arr1 = [1,2,3,4];
+let array2 = [...arr1];
+console.log(arr1);
+
+console.log(array2);
+
+
+function restUse(x,y,z,...r){
+      console.log(x,y,z,r);
+}
+
+restUse(1,2,2,3,3,4,4,6);
+
+</script>
+
+
+<h2 style="color: rgb(0, 195, 255);">Destrutoring</h2>
+<script>
+console.log("In array")
+let a =[1,2,3,4,5]
+let [s,,g] = a;
+console.log(s,g);
+
+console.log("In Object")
+let obj = {
+    name :"Ritesh",
+    age :20
+}
+console.log(obj.age);
+var {age} =obj;
+console.log(age);
+
+</script>
+
+
+<h2>promise in java script</h2>
+<script>
+    console.log("promise in js");
+    let prom = new Promise((resolve,reject)=>{
+        if(true){
+            return resolve();
+        }
+        else{
+            return reject();
+        }
+    })
+
+    prom
+    .then(function(){
+        console.log("resolve chal raha hai");
+    })
+    .catch(function(){
+        console.log("reject chal raha hai");
+        
+    })
+    let n  = Math.floor(Math.random()*10);
+
+    let newprom = new Promise((res,rej)=>{
+        if(n<5){
+            return res();
+           
+        }
+        else{
+            return rej();
+        }
+    })
+
+    newprom.then(function(){
+        console.log(`5 se kam hai = ${n}`)
+    })
+    .catch(function(){
+        console.log(`5 se jyada hai = ${n}`)
+    })
+
+
+    let p1 = new Promise((res,rej)=>{
+        return res('ghar aa jao');
+    })
+
+    let p2 = p1.then(function(data){
+        console.log(data);
+         return new Promise(function(res,rej){
+             return res('gate kholo ')
+         })
+     })
+    let p3 = p2.then(function(data){
+     console.log(data)
+     return new Promise(function(res,rej){
+            return res('hoge bhag ja');
+     })
+    })                    
+     p4 = p3.then(function(data){
+   console.log(data)
+    })
+</script>
+<!-- 
+<h2>async awit in javascript</h2>
+<script>
+    console.log('async awit funtion in js');
+    async function asyncfun(){
+        let raw = await fetch(`https://randomuser.me/api/`);
+        let ans = await raw.json();
+        console.log(ans);
+
+    }
+</script> -->
+
+
+</html>

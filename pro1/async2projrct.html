@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intervel in async</title>
+</head>
+<body>
+    <h2>Aync me intervel js</h2>
+    <button id="changbtn">Change color</button>
+    <button id="stopbtn">Stop</button>
+</body>
+<script>
+
+
+//console.log(colorGenerate())
+
+const colorGenerate = function(){
+    const hex ="1234567890ABCDEF"
+    colorcode = '#'
+    for (let i = 0; i < 6; i++) {
+    colorcode += hex[Math.floor(Math.random()*16)]
+}
+return colorcode
+}
+
+let intervel;
+const changeBackground = function(){ 
+    //optimization
+    if(intervel==null){
+        intervel = setInterval(startbgchanges,1000)
+    }
+    
+    function startbgchanges(){
+        document.body.style.backgroundColor = colorGenerate()
+
+    }
+
+}
+
+const stopChanges = function(){
+    clearInterval(intervel)
+    //optimization
+    intervel = null;
+}
+
+const changebtn = document.querySelector('#changbtn').
+addEventListener('click',changeBackground)
+
+const stopbtn = document.querySelector('#stopbtn')
+.addEventListener('click',stopChanges)
+
+</script>
+</html>

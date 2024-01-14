@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic advance js</title>
+</head>
+<body>
+    <h1>let cons and var </h1>
+
+
+
+</body>
+<script>
+    // let a = 12;
+    // var b = 10;
+    // const c = 18;
+    
+    if(NaN){
+        console.log("value truthy hai");
+    }
+    else{
+        console.log("value falsy  hai");
+    }
+
+    let arr = [1,2,3,4,3,3,3,3]
+    arr.forEach(function(chat){
+        console.log(chat+2);
+    })
+
+
+
+    let obj = {
+        name : "Ritesh",
+        onlineForm : 2,
+        branch :"IT"
+    }
+    for(var key in obj){
+        console.log(key,'  =>',obj[key]);
+    }
+    delete obj.name;
+setTimeout(() => {
+    console.log('2 min')
+},10000);
+
+
+
+console.log("first class funtion")
+
+function fclassFunc(a){
+  
+    console.log(a);
+}
+fclassFunc(()=>{
+    console.log("hello Ritesh");
+})
+
+ar = [2.5,5];
+console.log(ar);
+
+const anotherElement = ( function abs(){
+    console.log(hello)
+})
+console.log(anotherElement);
+
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event me target</title>
+</head>
+<body>
+    <div id="all-heading">
+        <li><h1 id="headind">hellow </h1></li> 
+        <li><h1 id="heading">This is</h1></li>
+        <li><h1 id="heading">Ritesh sonboir</h1></li>
+        <li><h1 id="heading">From Durg CG</h1></li>
+    </div>
+    
+</body>
+
+<script>
+    const h1tag = document.querySelector('#heading')
+    console.log(h1tag)
+    const parentHeading = document.querySelector('#all-heading')
+    parentHeading.addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+       // e.target.parentNode.style.color = "blue"
+       
+        if(e.target.tagName === 'H1'){
+            e.target.parentNode.remove()
+
+        }
+
+
+    },true)
+    
+</script>
+
+</html>

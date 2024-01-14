@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element in DOM</title>
+</head>
+<body>
+    
+</body>
+<script>
+   let newh1 = document.createElement('h1')
+   console.log(newh1)
+   newh1.className = "Heading"
+   newh1.style.color = "yellow"
+   newh1.style.padding = "20px"
+   newh1.style.backgroundColor = "black"
+ //  newh1.textContent = "hello"
+  let textnode = document.createTextNode("optimised way experts")
+  newh1.appendChild(textnode)
+   document.body.appendChild(newh1)
+
+   
+
+
+</script>
+</html>

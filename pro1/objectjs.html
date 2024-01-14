@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in javascript</title>
+</head>
+<body>
+    <h1>object in js</h1>
+    <h1>object siglten aur literels</h1>
+</body>
+
+<script>
+    //sybole datatype ko kaise use  kare
+    let mysymble = Symbol("keyone")
+
+
+    const user = {
+        name : 'rinku',
+        fullname :'ritesh sonboir',
+        branch : "it",
+        marride : false,
+        [Symbol] : "sybole hare"
+    }
+    console.log(Object.keys(user)) //array ke formate me milega
+    console.log(Object.values(user))
+    //by defoult keys string hoti hai  jaise name,fullname aur branch
+
+
+    console.log(user.fullname)
+    console.log(user["marride"]) //dusra tarika 
+    console.log(user[Symbol]) //sybole access hua
+    console.log(typeof mysymble)
+
+    user.name = "ritesh sahu" //value change karna
+    console.log(user)
+
+   // Object.freeze(user) //object ko lock kar dena
+
+    user.branch =  "cs" //change nahi hua
+
+    user.funtionBanaho = function(){  //funtion object me add ho jahi
+        console.log("object me funtiopn hare")
+    }
+
+    user.dusrafuntion = function(){
+        console.log(`dura funtion add kare ho object me ${this.fullname}`)
+    }
+
+    console.log(user.funtionBanaho())
+    console.log(user.dusrafuntion())
+</script>
+ <script>
+    console.log("object singten ya cunstuctor se")
+
+    const singletenobj = new Object() //aise define kiya jata hai but dono me 
+    //koi deffrerence nahi hota 
+
+    console.log(singletenobj)
+
+    singletenobj.name = "jhandu"
+    singletenobj.branch = "nai jano"
+
+
+    //object ke ander object 
+
+    const obj = {
+        name : "ritesh",
+        branch :{
+            allbranch : "it cs",
+            dusra :{
+                it : "it hai",
+                cs :"cs hai"
+
+            }
+
+        }
+    }
+
+    console.log(obj.branch.dusra) //api me ?. ka use , 'agar value hai to age badho' ke liye hota hai
+
+
+
+    //object ko combine karna 
+
+    const obj1 = {
+        1:"a",2:"b",
+        3:"c",4:"d"
+    }
+    const obj2 = {
+        6:"4",7:"5",
+        8:"6",9:"9"
+    }
+
+    //Object.assign(target ,source)
+
+    const obj3 = {obj1,obj2} //isse to array wala case ho gaya
+    console.log(obj3) 
+    //isliye
+
+   const obj4 = Object.assign({},obj1,obj2) //yaha obj1 aur obj2 source hai
+   console.log(obj4)
+
+   //spread ke jariye 
+
+   const obj5 = {...obj1,...obj2}
+   console.log("spread obj =>",obj5)
+
+   console.log(Object.keys(obj5) ) //object ke ander se keys nikalna
+   console.log(Object.values(obj5)) //values ko object se nikalna 
+   console.log(Object.entries(obj5)) //bahot km use
+
+   //deta bsse me kam
+
+   const arrObj = [
+    {
+        name :"ritesh",
+        login : true,
+        branch :"it"
+    },
+    {
+        name :"nomesh",
+        login : true,
+        branch :"ibdd"
+    },
+    {
+        name :"Gulshan",
+        login : true,
+        branch :"it"
+    },
+    {
+        name :"mithlesh",
+        login : false,
+        branch :"cs"
+    }
+   ]
+
+   
+   console.log(arrObj[1].name)  //kafi use hota hai
+
+
+   //object destructuring
+   const course = {
+    coursename :"js hindi me",
+    price :"999",
+    courseInstructor : "hitesh"
+   }
+  //value easy tarike lana
+   const {courseInstructor: easyvalue ,price} = course
+   console.log(easyvalue,price)
+
+   
+
+ </script>
+</html>

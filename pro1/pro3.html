@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Cursor effect</title>
+
+<style>
+    #main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        height: 100vh;
+    }
+    .curser{
+        display: flex;
+        width: 20px;
+        height: 20px;
+        mix-blend-mode: difference;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        position: absolute;
+        transition: all linear 0.2s;
+    }
+    h1{
+        background: linear-gradient(to right, rgb(144, 144, 200), pink);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 8vw;
+        font-weight: 900;
+    }
+    #demo{
+        color: white;
+    }
+</style>
+
+</head>
+<body>
+    <div id="main">
+        <div class="curser"></div>
+        <h1>RITESH SHONBOIR</h1>
+        <button onclick="displayDate()">The time is?</button>
+        <p id="demo"></p>
+    </div>
+   
+</body>
+<script>
+   var main = document.querySelector("#main")
+   var Cursor = document.querySelector(".curser")
+
+   var h1 = document.querySelector("h1")
+
+   main.addEventListener("mousemove",function(hay){
+    Cursor.style.left = hay.x +"px";
+    Cursor.style.top = hay.y +"px";
+   })
+
+function displayDate() {
+  h1.style.color = "red";
+}
+
+</script>
+</html>

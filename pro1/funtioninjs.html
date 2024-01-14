@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript funtions</title>
+</head>
+<body>
+    <h1>funtion in js</h1>
+</body>
+<script>
+    function loginUserMassage(username){
+        if(true){
+            console.log(`${username} has loged in`)
+            return
+        }
+       
+        return console.log(`nuerical value is = ${username}`);   
+         //return ke phle ka instuction execute hota hai
+        
+    }
+    
+    console.log(loginUserMassage("rinku ji"))
+
+
+    //rest opretor -> skele wala kam
+
+    function calculateCartPrice(num,...num1){
+        return num1
+    }
+    console.log(calculateCartPrice(100,233,983,444))
+
+
+    // object ko funtion me pass karna
+    const user ={
+        name :"rinku",
+        branch:"it"
+    }
+
+    function handeObject(anyobject){
+        console.log(`${anyobject.name} is present in ${anyobject.branch}`)
+    }
+    handeObject(user)
+    handeObject({
+        name :"ritesh",
+        branch : "teli"
+    })  //direct object bhi pass kar skte hai
+
+    //array ko kaise pass kare funtion me
+
+
+    const myarry = [10,20,30,"ritesh"]
+
+    function returnarry(getarry){
+        return getarry[3]
+    }
+    console.log(returnarry(myarry))
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fecebook like </title>
+    <link  href="pro1.js">
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+        #card{
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            width: 200px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            resize: horizontal;
+        }
+        #profile{
+            display: flex;
+            background-color: rgba(43, 221, 31, 0.77);
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+        h2{
+            margin-top: -10px;
+            color: red;
+        }
+        #add-freind{
+            padding: 10px 20px;
+            background-color: rgb(23, 105, 230);
+            color: rgb(249, 249, 249);
+            size: 20px;
+            border: none;
+        }
+        #remove{
+            padding: 10px 10px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="card">
+        <div id="profile">
+            
+        </div>
+        <h1>Ritesh sahu</h1>
+        <h2>Dusman</h2>
+        <div id="both-button">
+            <button id="add-freind">Add Freind</button>
+            <button id="remove">remove</button>
+        </div>
+     
+    </div>
+</body>
+<script>
+    var FreindButton = document.querySelector("#add-freind");
+    var stetus = document.querySelector("h2")
+    var removeBtn = document.querySelector("#remove")
+    FreindButton.addEventListener("click",function(){
+        FreindButton.innerHTML = "requested";
+        FreindButton.style.backgroundColor = "red";
+        stetus.innerHTML = "freind";
+        stetus.style.color = "green";
+    })
+    removeBtn.addEventListener("click",function(){
+        FreindButton.innerHTML = "Add freind";
+        FreindButton.style.backgroundColor = "blue";
+        stetus.innerHTML = "Dusman";
+        stetus.style.color = "Red";
+    })
+</script>
+</html>

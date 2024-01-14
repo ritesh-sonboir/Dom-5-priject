@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype in js</title>
+</head>
+<body>
+  <h1>prototype in js</h1> 
+</body>
+<script>
+//js me sari cheeje object hai
+console.log("this & new  key in js")
+const a = [1,2,3,4,5,6,,6]
+//js behaviour => prototypl behaviour
+console.log(a)
+
+let demo = function b(num){
+   return num+2;
+
+}
+
+console.log(demo(10));
+
+function createUser(username,score){
+  this.username = username
+  this.score = score
+}
+
+createUser.prototype.increamentkaro = function(){
+  console.log(`inceameted value =>`,this.score+2)
+}
+
+//this mtlb jisne bhi mtb self funtion
+createUser.prototype.printkaro = function(){
+  console.log(`score is `,this.score)
+}
+
+//new keyword naya object banata hai yahi hai prototype funtion
+const crecketmath = new createUser("kohli",40)
+const dusramach =  new createUser("dhoni",50)
+
+crecketmath.printkaro();
+dusramach.printkaro();
+
+
+crecketmath.increamentkaro();
+dusramach.increamentkaro();
+
+
+
+//real prototype
+console.log('prototype')
+
+let string = 'homp  ';
+console.log(string.length)
+
+let myhero = ["saktiman","mypower"]
+let heropower ={
+     sktiman : "udna aur fite",
+     mypower : "sikhna aur apply karna",
+
+     getmypower: function(){
+      console.log(`mera power hai ${this.mypower}`)
+     }
+
+}
+//top level me object banana jisse funtion access kar sake
+Object.prototype.ritesh = function(){
+  console.log(`mor name ke object hare`)
+}
+
+heropower.ritesh() //object kar darise access
+myhero.ritesh() //array bhi kar daris
+
+Array.prototype.arayobject = function(){
+  console.log(`array se object ka accsess kise hua`)
+}
+console.log("array ko =>",myhero.arayobject())//array ko hua acess
+//myhero.arayobject();
+
+
+console.log("object ko =>",heropower.arayobject()) //object ko nahi hua 
+
+
+
+</script>
+</html>

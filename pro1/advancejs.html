@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Practice ES6 in js</title>
+</head>
+<body>
+    <h1>practice js</h1>
+    <h2>Let and const</h2>
+
+
+</body>
+<script>
+  
+  // var a = [1,2,3];
+  // var b = a;
+  // b.pop();
+  // a.push();
+  // console.log(b); 
+  // console.log(a); 
+
+
+// function  rinkuSahu(){
+//   var a = 'ritesh';
+//   function rahul(){
+//     let b ="Rahul"; 
+//   }
+//   return rahul(b);
+//   console.log(b);
+// }
+
+
+
+//cunstructor in js
+
+// function circularButton(color,bgcolor,id){
+//   this.color = color;
+//   this.bgcolor = bgcolor;
+//   this.id = id;
+//   this.borderRadius = 2;
+//   this.icon = false;
+// }
+
+// let redButton = new circularButton("red","green",4);
+// let blackBtn = new circularButton("black","purple",5);
+
+//IIFE- immedIATE Invoked funtion Expression
+
+// var a =(function(){
+//   var privateValue = 12;
+//   return{
+//     getter :function(){
+//       console.log(privateValue);
+//     },
+//     setter :function(val){
+//       privateValue = val;
+//     }
+//   }
+// })()
+
+
+//prototype 
+
+// var objecta = {
+//   name :"rinku"
+// }
+
+
+//prototype inherritence
+
+// let a = document.querySelector("h1");
+// let human = {
+//   canTalk : true,
+//   canWalk :a,
+//   canSee :true,
+//   haveEmmotions :true
+// }
+// console.log(human);
+
+// let ritesh = {
+//   intelligenceHai :true,
+//   mehnatiHai: "hello",
+//   websiteKnowledge :true,
+//   girfriendHai :false
+
+// }
+// console.log(ritesh);
+
+// ritesh.__proto__ = human;
+
+  //This keyword
+
+ 
+//in globle schop
+// console.log(this);
+
+//in local schop
+// function riteshStudy(){
+//   console.log(this);
+// }
+// riteshStudy();
+
+//in method
+// let obj = {
+//   baatKaro : function(){
+//     console.log(this);
+//   },
+//   name : "ritesh"
+// }
+// obj.baatKaro();
+
+
+//in Eventlitner
+
+// var headLine = document.querySelector("h1");
+// var headLinetwo = document.querySelector("h2");
+
+// headLine.addEventListener("click",function(){
+//   this.style.color = "green";
+//   console.log(this);
+  
+// })
+
+let a = 10;
+console.log(a)
+// let newString = new String("Ritesh");
+// console.log(newString);
+// let newNumr = new Number(10);
+// console.log(newNumr)
+let d = {
+  name :"rk",
+  branch :"it"
+};
+let e =d;
+//e = 120;
+console.log("d => ",d);
+console.log("e => ",e);
+e.name ="ganesh";
+d.branch ="cs";
+console.log({});
+
+
+</script>
+
+</html>

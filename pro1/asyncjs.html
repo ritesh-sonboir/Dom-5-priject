@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async js</title>
+</head>
+<body>
+    <h2>Aync js</h2>
+    <button id="stopbtn">Stop</button>
+    <button id="startbtn">Start</button>
+
+</body>
+
+<script>
+    const workaftime = function(){
+        document.querySelector('h2').innerHTML = "This is aync funtion"
+    }
+   const changme = setTimeout(workaftime,2000)
+
+    //kaise roke
+
+ //clearTimeout(changme)
+
+   document.querySelector('#stopbtn').addEventListener('click',function(){
+    console.log("change hona ruk ja ")
+    clearTimeout(changme)
+   })
+
+   document.querySelector("#startbtn").addEventListener("click",function(){
+    console.log("fir se start hoge")
+    setTimeout(workaftime,2000)
+   })
+   
+</script>
+</html>

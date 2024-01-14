@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+<body>
+    <div>
+        <ul class="listlang">
+            <li>javascript</li>
+            <li>python</li>
+        </ul>
+    </div>
+</body>
+<script>
+ //const langulist =  document.querySelector(".langlist")
+ const addlanguag = function(language){
+  const li = document.createElement('li')
+  li.style.color = "blue"
+  li.className = "li"
+ 
+
+  // isme har bar pura tree traverse karna padega isliye 
+  //optimised tarika nahi hai
+ // li.innerHTML =`${language}`
+
+  //optimised way
+  li.appendChild(document.createTextNode(language))
+  const newlang = document.querySelector(".listlang")
+  newlang.appendChild(li)
+  console.log(li)
+
+  
+
+ }
+ 
+ addlanguag(4)
+ addlanguag("java")
+ addlanguag(true)
+
+</script>
+<script>
+    // how to edit values 
+    const editsel = document.querySelector("li:nth-child(4)")
+   // editsel.innerHTML = "jahar"
+    const nawali =  document.createElement("li")
+    nawali.appendChild(document.createTextNode("nava subject"))
+    nawali.textContent = "dusra tarika"
+    editsel.replaceWith(nawali)
+
+   //remove
+   const remtsel = document.querySelector("li:first-child")
+   console.log(remtsel)
+   remtsel.remove()
+
+   //fun
+  // const newlang = document.querySelector(".listlang")
+  // newlang.remove()
+
+
+
+
+</script>
+</html>

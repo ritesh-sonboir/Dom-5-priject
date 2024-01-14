@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>other</title>
+
+    <style>
+        body{
+            background: black;
+            height: 100vh;
+        }
+        .elem{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            color: white;
+            height: 80px;
+            border-bottom: 2px solid white;
+        }
+       h1{
+        font-size: 50px;
+        z-index: 1;
+       } 
+       #img{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        border-radius: 50%;
+        transform: scale3d(0.5);
+        transition: 0.8s;
+        mix-blend-mode: difference;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="elem">
+        <h1>hello</h1>
+       
+        <img src="https://cdn.pixabay.com/photo/2023/10/29/11/33/cow-8349729_640.png" id="img" alt="">
+    </div>
+
+    <div class="elem">
+        <h1>Me haro</h1>
+        <img src="https://cdn.pixabay.com/photo/2023/09/18/13/46/spider-8260620_640.jpg" id="img" alt="">
+    </div>
+
+    <div class="elem">
+        <h1>Ritesh sonboir</h1>
+        <img src="https://cdn.pixabay.com/photo/2023/11/27/20/29/autumn-8416137_640.png" id="img" alt="">
+    </div>
+
+    <div class="elem">
+        <h1>From durg CG</h1>
+        <img src="https://cdn.pixabay.com/photo/2023/09/24/08/16/dragonfly-8272351_640.png" id="img" alt="">
+    </div>
+
+    <div class="elem">
+        <h1>Digital marketer</h1>
+        <img src="https://cdn.pixabay.com/photo/2023/11/07/10/06/girl-8371776_640.png" id="img" alt="">
+    </div>
+</body>
+
+<script>
+
+
+   
+
+var elemnt = document.querySelector(".elem");
+var img = document.getElementById("img");        
+ 
+
+elemnt.addEventListener("mousemove",function(hey){
+    
+    img[i].style.left = hey.x+"px";
+    img[i].style.top = hey.y+"px";
+
+    });
+
+
+//     elemnt.addEventListener("click",function(hey){
+//     img.style.opacity = 0;
+  
+// })
+    
+
+</script>
+</html>

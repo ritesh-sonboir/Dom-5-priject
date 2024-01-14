@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Insta Like btn Effect</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #card{
+            display: flex;
+            align-self: center;
+            height: 300px;
+            width: 250px;
+            position: relative;
+        }
+        #img{
+            border-radius: 20px;
+        }
+        #icon{
+            font-size: 60px;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 40%;
+            left: 55%; 
+            opacity: 0;
+            transform: scale(0);
+            transition: transform ease 0.5s;
+            
+                 
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="card">
+       <img src="https://www.nescafe.com/gb/sites/default/files/2023-08/long-black-coffee-what-is-it-1066x970.jpg" id="img"> 
+       <i class="ri-heart-fill" id="icon"></i>
+    </div>
+</body> 
+<script>
+    var image = document.querySelector("#img")
+    var icon = document.querySelector("#icon")
+    image.addEventListener("dblclick",function(){
+        icon.style.transform ="scale(1)";
+        icon.style.transition = "1s";  
+        icon.style.opacity = "1";
+       
+   setTimeout(function(){
+        icon.style.opacity = "0";
+        icon.style.color = "red";
+    },1000)
+   
+    })
+   
+
+
+</script>
+</html>

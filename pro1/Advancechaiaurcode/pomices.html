@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promis in js</title>
+</head>
+<body>
+    <h1>Promise in javascript</h1>
+</body>
+<script>
+   const promisone = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            console.log('aync task is complete')
+            resolve()
+        },2000)
+    })
+    promisone.then(function(){
+        console.log("Promise consumed")
+    }).finally(function(){console.log("hoge kaam")})
+    
+//    const promisTwo = new Promise(function(resolve,reject){
+   
+//     setTimeout(() => {
+//         resolve({name :'ritesh',branch :"information Technology",age:5})
+//     }, 2000);
+//    })
+
+//    promisTwo.then(function(userdetails,newfun){
+//     console.log(userdetails)
+//    })
+
+
+
+   const promisThree = new Promise((resolve, reject) => { 
+    const newfuntion = function(){
+         let err = false;
+         if(!err){
+            return resolve({
+                name:'rinku',
+                pass:'12345'
+            })
+         }
+         else{
+            return console.log("Error ocured")
+         }
+    }
+    newfuntion()
+   })
+
+   promisThree
+   .then(function(user){console.log(user); return user.name})
+   //details kaise le
+   //.then(function(username){console.log(username)})
+   .then(function(name){console.log(name)})
+
+   .catch(function(err){console.log(err)})
+   .finally(()=>{
+    console.log("jo bhi hona he ho ge")
+   })
+
+
+
+</script>
+</html>
