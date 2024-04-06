@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Prism.js Styles -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="code">
+  <pre><code class="language-markup">
+
+    &lt;?xml version="1.0" encoding="utf-8"?>
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    
+        &lt;EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:layout_margin="16dp"/>
+    
+        &lt;Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Add"/>
+    
+        &lt;ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnAdd"
+            android:layout_marginTop="16dp"/>
+    
+    &lt;/RelativeLayout>
+    
+
+  </code></pre>
+</div>
+<!-- Prism.js Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-markup.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<pre><code class="language-java">
+// Android code snippet
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText editText;
+    Button btnAdd;
+    ListView listView;
+    ArrayAdapter<String> adapter;
+    MyDBHandler dbHandler;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        editText = findViewById(R.id.editText);
+        btnAdd = findViewById(R.id.btnAdd);
+        listView = findViewById(R.id.listView);
+
+        dbHandler = new MyDBHandler(this);
+
+        displayRecords();
+
+        btnAdd.setOnClickListener(v -> {
+            String name = editText.getText().toString();
+            if (!name.isEmpty()) {
+                dbHandler.addRecord(name);
+                editText.setText("");
+                displayRecords();
+            } else {
+                Toast.makeText(MainActivity.this, "Enter a name", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void displayRecords() {
+        String[] records = dbHandler.getRecords();
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, records);
+        listView.setAdapter(adapter);
+    }
+}
+
+
+
+<!-- Prism.js script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+</body>
+</html>

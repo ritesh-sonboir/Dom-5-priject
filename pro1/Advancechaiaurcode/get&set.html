@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get & set</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class passEncrpt {
+        constructor(email,password){
+            this.email = email
+            this.password = password
+        }
+        get password(){
+            let encrypctval = this.new_password.toUpperCase()
+            console.log('get value ',encrypctval)
+           return encrypctval           
+        }
+        set password(value){
+           this.new_password = value
+           return console.log('value is ',value)
+        }
+    }
+
+    const newpaas = new passEncrpt("riteshsahu.gmail","he@0")
+    console.log(newpaas.password)
+    console.log(newpaas)
+
+
+    //properies ke jariye | old mathod
+
+    function User(email,username){
+        this._email = email
+        this._username = username
+
+        Object.defineProperty(this,"email",{
+            get :function(){
+                return  this._email.toUpperCase()
+            },
+            set :function(value){
+                this._email = value
+            }
+        })
+
+    }
+
+    const newEmail = new User("chai@gmail","chai")
+    console.log(newEmail._email)
+   
+</script>
+</html>

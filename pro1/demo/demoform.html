@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+</head>
+<style>
+    .msg{
+        color: aquamarine;
+    }
+</style>
+<body>
+    <div style="display: flex; height: 100vh; flex-direction: column;">
+        <div style="display: flex; justify-content: center;  align-items: center; padding: 20px;" >
+            <h1>Demo code is here</h1>
+        </div>
+        <div style="display: flex; padding: 20px;">
+           <pre id="code">
+              <code lang="xml">
+                <TextView
+                    android:id="@+id/textview_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/hello_first_fragment"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    /> 
+                </code>
+           </pre>
+        </div>    
+    </div>
+</body>
+<script>
+
+    window.onload = () =>{
+        let code = document.getElementById('code')
+        hljs.highlightBlock(code)
+    }
+
+</script>
+
+</html>

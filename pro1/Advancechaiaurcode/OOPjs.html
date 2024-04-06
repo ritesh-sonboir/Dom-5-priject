@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Object oriented programming in js</title>
+</head>
+<body>
+    <script>
+        //oop me classes technically nahi use hota
+        //it is a prototype based language
+        //oop is progadimal paradime
+
+        //Object literels
+
+        //-> Constructor funtion
+        //->Prototype
+        //-> Clasess
+        //->instances(new,this)
+
+
+        //Object literels -> Basic object
+
+        const obj = {
+            name :"hello",
+            branch :"IT"
+        }
+
+        //Constructor Funtion
+
+        //new keyword se naya context banta hai memory me jise Constructor funtion kahte hai
+
+       //  const a = new Promise()
+
+       //new 
+       //1 -> naya object create karga
+       //2 -> constructor funtion call hota hai new keword k karan
+       //3 ->argument inject ho jate hai
+       // then mil jayga
+         const c = new Date()
+         console.log(c)
+        
+    const demoFun = function(name,pata,branch){
+        this.pata = pata
+        this.branch = branch
+        this.greeting = function(){
+           return console.log(`${this.name}`)
+        }
+        console.log(this.greeting())
+       // return this
+    }
+
+    const funOne = new demoFun("rinku","hardi","IT")
+    const funTwo = new demoFun("Ritesh","Ramada","bs") //naya context create hua
+    console.log(funOne)
+    console.log(funTwo.constructor)
+  
+        
+    </script>
+</body>
+</html>

@@ -1,14 +1,5 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filter ,map ,reduce in js</title>
- </head>
- <body>
-    <h1>Filter ,map & Reduce </h1>
- </body>
- <script>
+
+
      const codingLanguage = ['java','python','c++','Ruby','html']
 
      const value = codingLanguage.forEach((item)=>{
@@ -63,7 +54,8 @@
     //acumlator => initialvalue{0},currentvalue => array ki value[1 fir,2,3]
     let a = [1,2,3,4]
     const tottlval = a.reduce((acc,currevalue)=>{
-        console.log(`accumlator => ${acc} currentvalue =>${currevalue}`)
+        console.log(`accumlator => ${acc}
+         currentvalue =>${currevalue}`)
         return acc+currevalue;
     },0)
 
@@ -100,5 +92,3 @@
 
 
 
- </script>
- </html>

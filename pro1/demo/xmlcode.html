@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Prism.js Styles -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="code">
+  <pre><code class="language-markup">
+    &lt;?xml version="1.0" encoding="utf-8"?>
+    &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        &lt;TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
+
+        &lt;Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Me" />
+    &lt;/LinearLayout>
+  </code></pre>
+</div>
+<button onclick="copyCodeToClipboard()">Copy Code</button>
+<script>
+     function copyCodeToClipboard() {
+      var codeText = document.getElementById("code").innerText;
+      navigator.clipboard.writeText(codeText)
+        .then(() => {
+          alert("Code copied to clipboard!");
+        })
+        .catch((error) => {
+          console.error("Failed to copy code: ", error);
+        });
+    }
+</script>
+<!-- Prism.js Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-markup.min.js"></script>
+</body>
+</html>

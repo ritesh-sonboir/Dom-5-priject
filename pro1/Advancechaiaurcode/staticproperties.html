@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static properties</title>
+</head>
+<body>
+    <script>
+         class User {
+            constructor(username){
+                this.username = username
+            }
+
+            logMe(){
+                console.log(`username is ${this.username}`)
+            }
+
+            static creatID(){   //static access dene se rokta hai
+                return "123"
+            }
+
+        }
+
+      
+
+
+        const newUser = new User("rinku")
+      //  console.log(newUser.creatID()) //aap access nahi kar skte
+
+      class newUserTwo extends User{
+        constructor(username,email){
+            super(username)
+            this.email = email
+        }
+      }
+
+
+      const nawaramu = new newUserTwo("ramu","googke@gmail.com")
+      nawaramu.logMe()
+     // console.log(nawaramu.creatID())  //ye bhi nahi kar sakega
+
+    </script>
+</body>
+</html>

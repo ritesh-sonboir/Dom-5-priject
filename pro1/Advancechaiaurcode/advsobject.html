@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object in js math py</title>
+</head>
+<body>
+
+    <script>
+    const discripter = Object.getOwnPropertyDescriptor(Math,'PI')
+    discripter.writable = true;
+    Math.PI = 5;   //change nahi ho sakta kyoki jisne librery banaya hai wo writable ko false kar diya hai
+    console.log(Math.PI)  
+    console.log(discripter)
+    //   console.log(Math.PI)
+    //   Math.PI = 5
+    //   console.log(Math.PI)
+
+    //aisa ka ham bhi ba=ana skte hai
+
+    const myObj = {
+        name :"ritesh no change",
+        price :"change",
+        writable0 : "no change",
+        demofuntion : function(){
+            console.log("code fat jayga")
+        }
+
+    }
+
+    console.log(Object.getOwnPropertyDescriptor(myObj,"name"))
+
+    Object.defineProperty(myObj,"name",{writable : false, enumerable : false})
+    console.log(Object.getOwnPropertyDescriptor(myObj, "name"))
+
+    myObj.name = "hellow"  //=> change nahi hoga  writable nahi hone ke karan
+    console.log(myObj)
+
+
+
+    for (let [key,values] of Object.entries(myObj)) { 
+
+    if(typeof values ===!"function") {
+
+        console.log(`${key} => ${values}`) 
+    
+    } //enubrable false hone ke karn name nahi aayga
+        
+    }
+
+
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Bind in js</title>
+</head>
+<body>
+    <button>Click karo</button>
+
+
+    <script>
+        class react {
+
+            constructor(){
+                this.name = "Rinku"
+                this.email = "sahuritesh@gmail.com"
+
+                //ham kya chahte hai ki button pe click hone se
+
+                document.querySelector('button')
+                .addEventListener("click",this.helloMsg
+                .bind(this)) //bind ke sath variable ki values chali jayegi
+
+            }
+
+            helloMsg(){
+                console.log("hay click hoge")
+                console.log(`my name is ${this.name} and email is ${this.email}`) //email au name to aat hi nai he
+            }
+        }
+        
+        new react().helloMsg
+
+
+    </script>
+    
+</body>
+</html>

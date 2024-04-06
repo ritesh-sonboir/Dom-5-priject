@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class contructor</title>
+</head>
+<body>
+    <script>
+
+        //class constctor se
+        class User {
+            constructor(username,email,pass){
+                this.username = username
+                this.email = email
+                this.pass = pass
+            }
+
+            encryptpass(){
+                return `${this.pass} abc`
+            }
+            
+            ChangeUsername(){
+                return `${this.username.toUpperCase()}`
+            }
+        }
+
+        const newuser = new User("rinku","rk.com","abc =")
+        console.log(newuser.encryptpass());
+        console.log(newuser.ChangeUsername());
+
+
+        //behind the scene  funtion se
+
+        function userTwo(username,email,pass){
+            this.username = username
+            this.email = email
+            this.pass = pass
+
+        }
+
+        userTwo.prototype.encryptpass = function(){
+            return `${this.pass} abc`
+        }
+
+        userTwo.prototype.ChangeUsername = function(){
+            return `${this.username.toUpperCase()}`
+        }
+
+        const newuserTwo = new userTwo("ritesh","rk.com","cba =")
+        console.log(newuserTwo.encryptpass());
+        console.log(newuserTwo.ChangeUsername());
+
+
+        //bolne ka matlab dono tariko se kiya ja sakta hai
+
+
+
+    </script>
+</body>
+</html>

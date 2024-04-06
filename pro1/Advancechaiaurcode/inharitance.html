@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inharitance </title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(username){
+                this.username = username
+            }
+
+            logMe(){
+                console.log(`username is ${this.username}`)
+            }
+
+        }
+
+
+        class Teacher extends User{  //ye class sabhi futionality use kar sakta user ke
+            constructor(username,pass,email){
+                super(username)  //super key ke karn .call aur this parameter use nahi karna padta 
+                //automatic variable lakar store kar deta hai
+                this.email = email
+                this.pass = pass
+            }
+
+            addCource(){
+                console.log(`A new cources added by ${this.username}`)
+            }
+        }
+
+        class alluser extends Teacher  {
+
+            constructor(username,pass,email){
+                super(username,pass,email)
+                
+            }
+            allfun(){
+                console.log(`username is ${this.username} and password is ${this.pass} and email is ${this.email}`)
+            }
+
+        }
+
+
+        const teacheruser = new Teacher("Rinku","123","abc@gmail.com")
+        teacheruser.addCource()
+        console.log(teacheruser)
+        teacheruser.logMe()
+
+
+
+        const usr = new User("Ritesh")
+        console.log(usr)
+        usr.logMe()
+
+        const foralluser = new alluser("rahul","495","alluser.com")
+        foralluser.allfun()
+        foralluser.logMe()
+        foralluser.addCource()
+        console.log(foralluser)
+
+        usr.logMe()  //values override nahi hoti
+
+
+        console.log(usr instanceof User)
+        console.log(foralluser instanceof Teacher)  //agar extends kiya hoga to true return karega
+      //  console.log(alluser instanceof foralluser)
+        
+    </script>    
+</body>
+</html>

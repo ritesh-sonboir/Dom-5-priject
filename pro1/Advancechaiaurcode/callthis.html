@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call this</title>
+</head>
+<body>
+    <script>
+
+        function setUsername(username){
+            this.username = username;
+            console.log(username)
+            console.log("hello")
+            
+        }
+       // setUsername('ramu')
+
+       function getuserdata(username,email,pass){
+     //  setUsername.call(username) //refrerence bs pass ho raha hai but variable hat ja raha hai stack se
+       const torthis = setUsername.call(this,username)  //apna this mujhe de do
+      // console.log(torthis)
+       this.email = email
+       this.pass = pass
+       }
+
+       console.log(new getuserdata("manish","djmanish.com","123"))
+
+
+    </script>
+</body>
+</html>

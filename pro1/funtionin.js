@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript funtions</title>
-</head>
-<body>
-    <h1>funtion in js</h1>
-</body>
-<script>
+
+
     function loginUserMassage(username){
         if(true){
             console.log(`${username} has loged in`)
-            return
+            return "return value"
         }
        
-        return console.log(`nuerical value is = ${username}`);   
+        return console.log(`value is = ${username}`);   
          //return ke phle ka instuction execute hota hai
         
     }
@@ -26,7 +17,9 @@
     //rest opretor -> skele wala kam
 
     function calculateCartPrice(num,...num1){
+        console.log(num)
         return num1
+        
     }
     console.log(calculateCartPrice(100,233,983,444))
 
@@ -36,6 +29,10 @@
         name :"rinku",
         branch:"it"
     }
+    // const dusraobj = {
+    //     name : "gangu",
+    //     branch :"cs"
+    // }
 
     function handeObject(anyobject){
         console.log(`${anyobject.name} is present in ${anyobject.branch}`)
@@ -50,14 +47,17 @@
 
 
     const myarry = [10,20,30,"ritesh"]
+    const [num1,num2,num3,text] = myarry
 
     function returnarry(getarry){
+        console.log(num3)
         return getarry[3]
+        
     }
+    console.log(num1)
     console.log(returnarry(myarry))
 
 
 
 
-</script>
-</html>
+

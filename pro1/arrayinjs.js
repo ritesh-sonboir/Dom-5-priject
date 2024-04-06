@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>array in javascript</title>
-</head>
-<body>
-    <h1>array in javascript</h1>
-    <h1>array function</h1>
-    
-</body>
-<script>
+
     let arr = [1,3,3,3,"ritesh",3]
     console.log(arr)
     arr.push(10);
+    console.log(arr)
+
     arr.pop()
-    arr.unshift(30)//suru me ass ho jayga, todo list wale app me use kiya ja skta hai 
+    console.log(arr)
+
+    arr.unshift(30)
+    console.log(arr)
+    //suru me add ho jayga, todo list wale app me use kiya ja skta hai 
     //baki optimization ke liye thik nahi hai kyoko sari value shift hone se operation
     //time leta hai, koi argument nahi leta
 
@@ -36,18 +30,21 @@
    const  a = [1,23,4,5,6,7]
    console.log("origenel array before =>",a)
    
-   const slicekaro = a.slice(2,5)
+   const slicekaro = a.slice(0,3)
    console.log("slice values =>" ,slicekaro);
+
+   console.log(a)
 
    console.log("origenel array after slice operation =>",a)
 
-   const splicekaro = a.splice(2,5)
+   const splicekaro = a.splice(0,3)
    console.log("spice values =>",splicekaro)
 
    //splice origenel array ko manupulate karta hai aur changes kar deta hai , isme 
    //isme range include hoti hai
 
-   console.log("origenel array after splice operation",a)
+   console
+   .log("origenel array after splice operation",a)
 
 
 
@@ -65,8 +62,9 @@
 //to array ko ek me kaise jode 
 
   const allarr = af.concat(af2)
-
+  
   console.log(allarr)
+  console.log(typeof allarr)
 
   //dusra tarika hai spread method se
 
@@ -83,7 +81,7 @@
   console.log(convarr)
 
 
- console.log(Array.isArray("rinku"))
+ console.log(Array.isArray(anotherarr))
  console.log(Array.from("rinku")) //array me convert kar dega
 
  console.log(Array.from({name : "rinkuji"})) //ise directly to nai convert kar skta but i
@@ -98,6 +96,3 @@
 
     
 
-
-</script>
-</html>

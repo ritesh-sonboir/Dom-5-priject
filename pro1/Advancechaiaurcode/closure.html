@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure & Laxical schoping </title>
+
+</head>
+
+<body>
+    <button id="orangebtn">orang</button>
+    <button id="redbtn">red</button>
+
+
+    <script>
+
+        //     function makeFunc() {
+        //         const name = "Mozilla";
+        //         function displayName() {
+        //             console.log(name);
+        //          }
+        //        // return displayName;
+        //        displayName()
+        //     }
+
+
+        //    makeFunc();
+
+        // console.log(a)
+
+
+        function makeAdder(x) {
+            return function (y) {
+                return x + y;
+            };
+        }
+
+        const add5 = makeAdder(5);
+        const add10 = makeAdder(10);
+
+        console.log(add5(2)); // 7
+        console.log(add10(2)); // 12
+    </script>
+    <script>
+        // document.getElementById("orangebtn").addEventListener("click",()=>{
+        //     document.body.style.backgroundColor = "orange"
+        // })
+        // document.getElementById("redbtn").addEventListener("click",()=>{
+        //     document.body.style.backgroundColor = "red"
+        // })
+
+        function clickHandlor(color){
+         //   document.body.style.backgroundColor = `${color}`
+            //closer ke karan pura laxical schop => variabs return hoga
+          return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+            
+        }
+
+        document.getElementById("orangebtn")
+        .addEventListener("click",clickHandlor("orange"))
+
+        document.getElementById("redbtn")
+        .addEventListener("click",clickHandlor("red"))
+
+    </script>
+</body>
+
+</html>
